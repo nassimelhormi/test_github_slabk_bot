@@ -1,0 +1,7 @@
+github:
+  token: "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"
+  url: "https://api.github.com/"
+
+slack:
+  token: ""
+  url: ""
