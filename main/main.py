@@ -4,7 +4,7 @@ import asyncio
 
 def main():
     github_client = GithubClient()
-    asyncio.run(github_client.get_open_pr("nassimelhormi", "test_github_slabk_bot"))
+    asyncio.run(github_client.get_pr_staging("nassimelhormi", "test_github_slabk_bot"))
 
 
 if __name__ == '__main__':
