@@ -73,15 +73,16 @@ class GithubClient:
     """
 
     async def get_pr_staging(self, owner: str, repo: str):
+        results = []
         prs = await self.get_closed_pr(owner=owner, repo=repo)
         res_prod = self._get_branch_infos(owner=owner, repo=repo, branch="prod")
 
         last_merge_date_prod = datetime.strptime(res_prod["commit"]["commit"]["committer"]["date"],
                                                  "%Y-%m-%dT%H:%M:%SZ")
-
+        print(prs)
         for pr in prs:
+
             if datetime.strptime(pr["merged_at"], "%Y-%m-%dT%H:%M:%SZ") >= last_merge_date_prod:
                 print(pr)
-                print("Prod : " + str(last_merge_date_prod))
-
-        return True
+                results.append(pr)
+        return results
