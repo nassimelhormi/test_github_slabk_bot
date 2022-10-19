@@ -4,5 +4,5 @@ github:
   branch: "master"
 
 slack:
-  token: ""
-  url: ""
+  token: "xoxb-4223066129283-4220316106149-zr0tiUKeBPRb9Sk7cTxjtD40"
+  channel: "#github"
